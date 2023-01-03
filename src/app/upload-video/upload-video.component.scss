@@ -1,0 +1,23 @@
+.upload-home {
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  //   justify-content: center;
+  margin-top: 5%;
+  }
+  
+  .upload-cls {
+    background-color: rgb(123, 176, 189);
+    padding: 5%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  .breadcrumb-cls {
+      padding-left: 20px;
+      padding-top: 5px;
+      background-color: #e6e6e6;
+    }
+  
