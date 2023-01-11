@@ -1,24 +1,81 @@
 <app-header></app-header>
 <div class="breadcrumb-cls">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">
-        <a href="#">Upload</a>
-      </li>
-    </ol>
-  </nav>
-</div>
+
+	<nav aria-label="breadcrumb">
+  
+	  <ol class="breadcrumb">
+  
+		<li class="breadcrumb-item"><a href="#">Home</a></li>
+  
+		<li class="breadcrumb-item active" aria-current="page">
+  
+		  <a href="#">Upload</a>
+  
+		</li>
+  
+	  </ol>
+  
+	</nav>
+  
+  </div>
 <div class="upload-home">
   <div class="upload-cls">
     <p>Click on the "Choose File" button to upload your video:</p>
+	<form [formGroup]="FileuploadFormGroup">
 
-    <form action="/action_page.php">
-      <input type="file" id="myFile" name="filename" />
-      <input type="submit" />
-    </form>
-  </div>
-</div>
+ 
+
+               
+
+		<div class="row">
+
+		  <div class="col-12">
+
+			Category
+
+			<select name="category" formControlName="category" class="select form-control-lg">
+
+			  <option value="1" disabled>Choose option</option>
+
+			  <option value="cooking">Cooking</option>
+
+			  <option value="beuty">Beuty</option>
+
+			  <option value="nature">Nature/Environment</option>
+
+			</select>
+
+			<label class="form-label select-label">Choose option</label>
+
+		 
+
+		</div><br>
+
+	   
+
+		  <div class="row">
+
+			  <!-- <div class="col-md-6 mb-4 pb-2"><img width="40" src="https://localhost:4200/assets/images/{videofile}"> -->
+
+				  <input type="file" formControlName="videofile" name="videofile" class="form-control form-control-lg" id="videofile" />
+
+			  <!-- <label for="videofile" class="form-label">Upload File</label> -->
+
+		  <!-- </div>-->
+
+		   </div></div>  
+
+	  <div class="mt-4 pt-2">                
+
+		<button type="submit" (click)="onsubmit()">Upload</button>
+
+	  </div>  
+
+	</form>
+	
+
+    
+
 
 <footer class="text-center text-md-start bg-light text-muted">
   <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05)">

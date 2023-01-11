@@ -27,6 +27,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadVideoComponent } from './upload-video/upload-video.component';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UploadVideoComponent } from './upload-video/upload-video.component';
     UserhomeComponent,
     HeaderComponent,
     UploadVideoComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { UploadVideoComponent } from './upload-video/upload-video.component';
     MdbValidationModule,
     BrowserAnimationsModule,
     NgxVideoListPlayerModule,
+    DropDownListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

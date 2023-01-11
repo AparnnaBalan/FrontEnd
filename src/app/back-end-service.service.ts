@@ -38,5 +38,14 @@ export class BackEndServiceService {
 
 
     }
+    fileupload(data:any) {
+
+      this.http.post('https://localhost:44380/api/Registeration/fileupload',data).toPromise().then(result =>
+
+      {console.log(result);}),window.alert('file uploaded')
+
+ 
+
+     }
 
 }

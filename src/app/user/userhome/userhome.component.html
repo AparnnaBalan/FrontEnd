@@ -1,12 +1,143 @@
 <app-header></app-header>
-<div class="breadcrumb-cls">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page"><a href="#">Home</a></li>
-    </ol>
-  </nav>
-</div>
 <div class="user-home">
+	<div class="area"></div>
+
+<nav class="main-menu">
+
+
+
+
+    <ul>
+
+        <li>
+
+            <a [routerLink]="['/userhome/Home']">
+
+                <i class="fa fa-home fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['userhome/uploadvideo']">
+
+                <i class="fa fa-question"></i>
+
+                <span class="nav-text">
+
+                   Help
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['/userhome/Upload']">
+
+                <i class="fa fa-cog"></i>
+
+                <span class="nav-text">
+
+                 Settings
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['/adminhome/viewproducts']">
+
+                <i class="fa fa-comment-o"></i>
+
+                <span class="nav-text">
+
+                  FeedBack
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a [routerLink]="['/adminhome/productregister']">
+
+                <i class="fa fa-laptop fa-2x"></i>
+
+                <span class="nav-text">
+
+                  Complaint
+
+                </span>
+
+            </a>
+
+
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a [routerLink]="['/adminhome/viewcomplaint']">
+
+                <i class="fa fa-info-circle"></i>
+
+                <span class="nav-text">
+
+                  About
+
+                </span>
+
+            </a>
+
+        </li>
+
+
+
+    </ul>
+
+    <ul class="logout">
+
+        <li>
+
+            <a href="#" [routerLink]="['/Home/login']">
+
+                <i class="fa fa-power-off fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Logout
+
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>
+
+
+
+</nav>
+
+<section></section>
   <div class="media-player">
     <div class="search-section">
       <span aria-hidden="true">Search</span>
