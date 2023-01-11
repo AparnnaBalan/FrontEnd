@@ -33,7 +33,7 @@ export class BackEndServiceService {
 
      this.http.post('https://localhost:44380/api/Registeration/insertregistrationdata',data).toPromise().then(result =>
 
-     {console.log(result);})
+     {console.log(result);}),window.alert('Registered Successfully'),window.location.href='/Login'
 
 
 

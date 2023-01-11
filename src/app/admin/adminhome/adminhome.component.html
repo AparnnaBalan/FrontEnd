@@ -1,1 +1,132 @@
-<p>adminhome works!</p>
+<div class="area"></div>
+
+<nav class="main-menu">
+
+
+
+
+    <ul>
+
+        <li>
+
+            <a [routerLink]="['/adminhome']">
+
+                <i class="fa fa-home fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Dashboard
+
+                </span>
+
+            </a>
+
+
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['/adminhome/viewuser']">
+
+                <i class="fa fa-user"></i>
+
+                <span class="nav-text">
+
+                    Users
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['/adminhome/confirmuser']">
+
+                <i class="fa fa-info-circle"></i>
+
+                <span class="nav-text">
+
+                    About
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="#" [routerLink]="['/adminhome/viewproducts']">
+
+                <i class="fa fa-question"></i>
+
+                <span class="nav-text">
+
+                   Help
+
+                </span>
+
+            </a>
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a [routerLink]="['/adminhome/productregister']">
+
+                <i class="fa fa-comment-o"></i>
+
+                <span class="nav-text">
+
+                   FeedBack
+
+                </span>
+
+            </a>
+
+
+
+        </li>
+
+        <li class="has-subnav">
+
+            <a [routerLink]="['/adminhome/viewcomplaint']">
+
+                <i class="fa fa-laptop fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Complaints
+
+                </span>
+
+            </a>
+
+        </li>
+
+
+
+    </ul>
+
+    <ul class="logout">
+
+        <li>
+
+            <a href="#" [routerLink]="['/Home/login']">
+
+                <i class="fa fa-power-off fa-2x"></i>
+
+                <span class="nav-text">
+
+                    Logout
+
+                </span>
+
+            </a>
+
+        </li>
+
+    </ul>

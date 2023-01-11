@@ -16,7 +16,9 @@ export class RegistrationComponent implements  OnInit{
 
      {
 
-       UserName:[''],
+      FirstName:[''],
+
+      LastName:[''],
 
        Dob:[''],
 
@@ -28,7 +30,11 @@ export class RegistrationComponent implements  OnInit{
 
        Country:[''],
 
-       Password:['']
+       Username:[''],
+
+       Password:[''],
+
+       ConfirmPassword:['']
 
      }
 
