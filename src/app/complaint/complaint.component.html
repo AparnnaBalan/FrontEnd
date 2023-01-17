@@ -1,0 +1,55 @@
+<div class="container mt-3">
+
+    <h1>View Complaints</h1>
+
+    <table class="table">
+
+    <thead><tr>
+
+        <th> SL Number </th>
+
+        <th> Name</th>
+
+        <th> Email</th>
+
+        <th> Subject</th>
+
+        <th> Message</th>
+
+    </thead>
+
+    <tr *ngFor="let item of Dataarray let i=index" class="table-primary">
+
+        <td> {{i+1}} </td>
+
+        <td> {{item.name}}</td>
+
+        <td> {{item.email}} </td>
+
+        <td> {{item.subject}} </td>
+
+        <td> {{item.message}} </td>
+
+        <td> {{item.status}}</td>
+
+        <!-- <td><a [routerLink]="['/adminhome/editcourse',item.courseid]">Edit Status</a></td> -->
+
+        <td>
+
+            <!-- <button class="btn btn-primary" (click)="pending(item.Complaintid,item.name,item.email,item.subject,item.message)">Pending</button> &nbsp;
+
+
+
+            <button class="btn btn-primary" (click)="completed(item.Complaintid,item.name,item.email,item.subject,item.message)">Completed</button>
+
+            </td> -->
+
+   
+
+    <!-- <td><a [routerLink]="['adminhome/deletecourse',item.courseid]">Delete</a></td> -->
+
+    </tr>
+
+    </table>
+
+    </div>

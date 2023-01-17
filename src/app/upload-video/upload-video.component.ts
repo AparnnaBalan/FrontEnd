@@ -12,7 +12,7 @@ export class UploadVideoComponent implements OnInit {
   FileuploadFormGroup=this.fb.group(
     {
       category:[''],
-      videofile:['']
+      videofile:['https://localhost:44336/video/{videofile}']
 
     }
   )

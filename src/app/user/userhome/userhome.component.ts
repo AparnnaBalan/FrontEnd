@@ -1,92 +1,106 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IVideoConfig } from 'ngx-video-list-player';
+import { BackEndServiceService } from 'src/app/back-end-service.service';
 
 @Component({
   selector: 'app-userhome',
   templateUrl: './userhome.component.html',
   styleUrls: ['./userhome.component.scss'],
 })
-export class UserhomeComponent {
+export class UserhomeComponent implements OnInit {
   config: IVideoConfig = {
     sources: [
       {
         src: 'assets/videos/abc.mp4',
-        videoName: 'Cooking',
-        artist: 'video1_artist',
+        videoName: 'Coding Challenge',
+        artist: 'Veena',
       },
       {
         src: 'assets/videos/xyz.mp4',
         videoName: 'BeautyTips',
-        artist: 'video2_artist',
+        artist: 'Amal',
       },{
-        src: 'assets/videos/ab.mp4',
-        videoName: 'Coding Challenge',
-        artist: 'video1_artist',
+        src: 'assets/videos/x.mp4',
+        videoName: 'Save Plant',
+        artist: 'Noora',
       },
       {
-        src: 'assets/videos/xyz.mp4',
-        videoName: 'Food Vlogs',
-        artist: 'video2_artist',
+        src: 'assets/videos/xy.mp4',
+        videoName: 'BiriyaniRecipe',
+        artist: 'Meena',
       },{
         src: 'assets/videos/abc.mp4',
         videoName: 'M4.TECH',
-        artist: 'video1_artist',
+        artist: 'Thomas',
       },
       {
         src: 'assets/videos/xyz.mp4',
         videoName: 'Songs',
-        artist: 'video2_artist',
+        artist: 'Arun',
       },{
         src: 'assets/videos/abc.mp4',
         videoName: 'Biriyani Recepies',
-        artist: 'video1_artist',
+        artist: 'Nila',
       },
       {
         src: 'assets/videos/xyz.mp4',
         videoName: 'Module6',
-        artist: 'video2_artist',
+        artist: 'Mila',
       },{
         src: 'assets/videos/abc.mp4',
         videoName: 'Easy Chicken Curry',
-        artist: 'video1_artist',
+        artist: 'Vila',
       },
       {
         src: 'assets/videos/xyz.mp4',
-        videoName: 'video2_name',
-        artist: 'video2_artist',
+        videoName: 'Dance',
+        artist: 'Rahman',
       },{
         src: 'assets/videos/abc.mp4',
-        videoName: 'video1_name',
-        artist: 'video1_artist',
+        videoName: 'Dance',
+        artist: 'Danie',
       },
       {
         src: 'assets/videos/xyz.mp4',
-        videoName: 'video2_name',
-        artist: 'video2_artist',
+        videoName: 'Music',
+        artist: 'Raman',
       },{
         src: 'assets/videos/abc.mp4',
-        videoName: 'video1_name',
-        artist: 'video1_artist',
+        videoName: 'BiriyaniRecipe',
+        artist: 'Seetha',
       },
       {
         src: 'assets/videos/xyz.mp4',
-        videoName: 'video2_name',
-        artist: 'video2_artist',
+        videoName: 'BeautyTips',
+        artist: 'Sankar',
       },{
         src: 'assets/videos/abc.mp4',
-        videoName: 'video1_name',
-        artist: 'video1_artist',
+        videoName: 'Receipes',
+        artist: 'Miya',
       },
       {
         src: 'assets/videos/xyz.mp4',
-        videoName: 'video2_name',
-        artist: 'video2_artist',
+        videoName: 'FoodVlogs',
+        artist: 'Amitha',
       },
       {
         src: 'assets/videos/xyz.mp4',
-        videoName: 'video2_name',
-        artist: 'video2_artist',
+        videoName: 'Yoga',
+        artist: 'Riya',
       },
     ],
   };
+  Dataarray:any[]=[];
+
+  constructor(private backendservice:BackEndServiceService){}
+
+
+
+  ngOnInit(): void {
+
+    this.backendservice.getvideoData().subscribe((res)=>
+
+    {this.Dataarray=res;})
+
+  }
 }

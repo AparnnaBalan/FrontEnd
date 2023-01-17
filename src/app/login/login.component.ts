@@ -63,16 +63,13 @@ export class LoginComponent implements OnInit {
       this.LoginForm.value.Password == 'Admin'
     ) {
       this.router.navigate(['adminhome']);
-    } else {
-      this.BackEndService.login([
+    } else {this.BackEndService.login([
         this.LoginForm.value.UserName,
         this.LoginForm.value.Password,
-      ]).subscribe((res) => {
-        console.log(res);
+      ]).subscribe((res) => {console.log(res);
         console.log(this.LoginForm.value.UserName);
 
-        if (res == 'Failure') {
-          this.isUserValid = false;
+        if (res == 'Failure') { this.isUserValid = false;
 
           alert('Login Unsuccessful');
         } else {

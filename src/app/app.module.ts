@@ -28,6 +28,12 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadVideoComponent } from './upload-video/upload-video.component';
 import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { SearchComponent } from './search/search.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { ViewusersComponent } from './user/viewusers/viewusers.component';
+
+
 
 @NgModule({
   declarations: [
@@ -38,6 +44,12 @@ import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
     UserhomeComponent,
     HeaderComponent,
     UploadVideoComponent,
+    SearchComponent,
+    ContactUsComponent,
+    ComplaintComponent,
+    ViewusersComponent,
+  
+   
   
   ],
   imports: [

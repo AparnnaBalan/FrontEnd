@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BackEndServiceService {
+ 
 
   constructor(private http:HttpClient) { }
 
@@ -12,7 +13,7 @@ export class BackEndServiceService {
 
 
 
-    return this.http.post("https://localhost:44380/api/Registeration/LoginUser",{
+    return this.http.post("https://localhost:44336/api/Registration/LoginUser",{
 
     UserName:loginInfo[0],
 
@@ -31,7 +32,7 @@ export class BackEndServiceService {
 
   insertregistrationdata(data:any) {
 
-     this.http.post('https://localhost:44380/api/Registeration/insertregistrationdata',data).toPromise().then(result =>
+     this.http.post('https://localhost:44336/api/Registration/insertregistrationdata',data).toPromise().then(result =>
 
      {console.log(result);}),window.alert('Registered Successfully'),window.location.href='/Login'
 
@@ -40,12 +41,40 @@ export class BackEndServiceService {
     }
     fileupload(data:any) {
 
-      this.http.post('https://localhost:44380/api/Registeration/fileupload',data).toPromise().then(result =>
+      this.http.post('https://localhost:44336/api/Registration/fileupload',data).toPromise().then(result =>
 
       {console.log(result);}),window.alert('file uploaded')
 
  
 
      }
+     getvideoData()
 
+    {
+
+     return this.http.get<any>('https://localhost:44336/api/Registration/view')
+
+    }
+    contact(data:any) {
+
+      this.http.post('https://localhost:44336/api/Registration/contact',data).toPromise().then(result =>
+
+      {console.log(result);}),window.alert('Message Sent'), window.location.href='/userhome'
+
+     }
+
+     getComplaintsstatus()
+
+    {
+
+     return this.http.get<any>('https://localhost:44336/api/Registration/ViewC')
+
+    }
+    getUserData()
+
+    {
+
+     return this.http.get<any>('https://localhost:44336/api/Registration/ViewU')
+
+    }
 }
